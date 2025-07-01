@@ -1,0 +1,176 @@
+/* Import a nice sans-serif from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+
+:root {
+  --accent: #ff5722;
+  --dark-bg: #121212;
+  --dark-surface: #1e1e1e;
+  --text-primary: #e0e0e0;
+  --text-secondary: #aaaaaa;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: var(--dark-bg);
+  color: var(--text-primary);
+  line-height: 1.6;
+}
+
+/* Navbar: sticky with blur */
+.navbar {
+  backdrop-filter: blur(8px);
+  background: rgba(18,18,18,0.75) !important;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+.navbar-brand {
+  font-weight: 700;
+  color: var(--accent) !important;
+}
+.nav-link {
+  color: var(--text-secondary) !important;
+  transition: color 0.2s;
+}
+.nav-link:hover {
+  color: var(--accent) !important;
+}
+.btn-dark {
+  background-color: var(--accent);
+  border: none;
+}
+.btn-dark:hover {
+  background-color: #e64a19;
+}
+
+/* Hero Section: gradient overlay */
+.hero {
+  background: 
+    linear-gradient(to bottom right, rgba(0,0,0,0.7), rgba(0,0,0,0.3)),
+    url('https://source.unsplash.com/1600x600/?technology');
+  background-size: cover;
+  background-position: center;
+  padding: 6rem 0;
+  text-align: center;
+}
+.hero h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #fff;
+}
+.hero p {
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+  color: var(--text-secondary);
+}
+.hero .btn-warning {
+  background-color: var(--accent);
+  border: none;
+  padding: 0.75rem 1.5rem;
+  font-weight: 600;
+}
+.hero .btn-warning:hover {
+  background-color: #e64a19;
+}
+
+/* Featured Articles Cards */
+.card {
+  background-color: var(--dark-surface);
+  border: none;
+  border-radius: 1rem;
+  overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 24px rgba(0,0,0,0.5);
+}
+.card-img-top {
+  height: 200px;
+  object-fit: cover;
+  transition: transform 0.5s;
+}
+.card:hover .card-img-top {
+  transform: scale(1.05);
+}
+.card-body {
+  padding: 1.25rem;
+}
+.card-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 0.75rem;
+}
+.card-text {
+  color: var(--text-secondary);
+  margin-bottom: 1rem;
+}
+.btn-outline-primary {
+  color: var(--accent);
+  border-color: var(--accent);
+  border-radius: 50px;
+  padding: 0.4rem 1rem;
+}
+.btn-outline-primary:hover {
+  background-color: var(--accent);
+  color: #fff;
+}
+
+/* Section Titles */
+.articles h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+/* Latest Posts */
+.latest-posts h2 {
+  color: #ffc107;
+}
+.post-card {
+  transition: background-color 0.3s, transform 0.3s;
+}
+.post-card:hover {
+  background-color: #343a40;
+  transform: translateY(-5px);
+}
+
+/* Newsletter */
+.newsletter {
+  background: linear-gradient(135deg, #222, #111);
+}
+.newsletter input {
+  max-width: 350px;
+  border-radius: 50px 0 0 50px;
+}
+.newsletter button {
+  border-radius: 0 50px 50px 0;
+}
+
+/* About */
+.about h2 {
+  color: #ffc107;
+}
+.about p {
+  font-size: 1.1rem;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* Footer */
+.footer {
+  font-size: 0.9rem;
+}
+.footer a:hover {
+  color: #ffc107;
+  text-decoration: underline;
+}
